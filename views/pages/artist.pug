@@ -1,0 +1,17 @@
+html
+    head
+        title #{artist}  
+body
+    include ../partials/headers
+    div#main
+        h1 #{artist}  
+        h4 Artworks:
+        each art, key in allArts
+                a(href="/artworks/" + key) #{art} 
+                br
+        h4 Workshops:
+        if bool==false
+            button#follow(type="button" value=artist) Follow
+        else
+            button#unfollow(type="button" value=artist) Unfollow
+        script(src="/follow.js")

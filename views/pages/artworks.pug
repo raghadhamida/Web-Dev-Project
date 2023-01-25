@@ -1,0 +1,11 @@
+html
+    head
+        title Results
+    body 
+        include ../partials/headers
+ 
+        h4 Listing the matching artworks:
+        div 
+            each artwork in result
+                a(href="/artworks/" + artwork._id) #{artwork.name}
+                br

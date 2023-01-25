@@ -1,0 +1,29 @@
+html
+    head
+        title #{art.name}
+body
+    include ../partials/headers
+    div#main
+        h1 #{art.name}
+        p By Artist: 
+        a(href="/artists?artist=" + art.artist) #{art.artist}
+        p Year: #{art.year}
+        p Category: #{art.category}
+        each cat in categories
+            a(href="/categories?category=" + cat) #{cat}
+            br
+        p Medium: #{art.medium}
+        p Description: #{art.description}
+        a(href=art.image) Click here to view #{art.name} image
+        p Likes: #{art.likes}
+        p Reviews:
+        ul
+        each rev, key in reviews
+            li #{key} said: #{rev}
+        div 
+            h4 Add a Review: 
+            input(type="textbox" id="rev" value="Review")
+            button(type="button" id="review") Add Review
+        div 
+            button(type="button" id="like") Like 
+        script(src="/reviews.js")

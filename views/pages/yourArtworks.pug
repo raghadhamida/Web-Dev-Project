@@ -1,0 +1,18 @@
+html
+    head
+        title Reviewed
+    body
+        include ../partials/headers
+        div#reviewed
+            h1 Reviewed Artworks
+            each review, key in reviewed
+                a(href="/artworks/" + key) #{review} 
+                input(type='submit', id=key class="removeRevButton" value="Remove Review")
+                br
+        div#liked
+            h1 Liked Artworks
+            each like, keyy in liked
+                a(href="/artworks/" + keyy) #{like} 
+                input(type='submit', id=keyy class="removeLikeButton" value="Remove Like")
+                br
+        script(src="/removeReviewed.js")

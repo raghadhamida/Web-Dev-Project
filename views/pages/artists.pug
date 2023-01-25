@@ -1,0 +1,12 @@
+html
+    head
+        title Following
+    body
+        include ../partials/headers
+        div#main
+            h1 Following
+            each artist in followed
+                a(href="/artists?artist=" + artist) #{artist}
+                input(type='submit', id=artist class="UnfollowBttn" value="Unfollow")
+                br
+            script(src="/removeFollow.js")

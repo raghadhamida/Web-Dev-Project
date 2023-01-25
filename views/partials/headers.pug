@@ -1,0 +1,30 @@
+div#header 
+    a(href="/home") Home 
+    |
+    if session && session.loggedin 
+        span 
+            a(href="/switch") Switch Accounts 
+            |
+            |
+            |
+        span 
+            a(href="/following") Following 
+            |
+            |
+            |
+        span 
+            a(href="/searchArtworks") Search Artworks 
+            |
+            |
+            |
+        span 
+            a(href="/yourArtworks") Reviewed/Liked Art 
+            |
+            |
+            |
+        span 
+            a(href="/logout") Logout
+    else 
+        span 
+            a(href="/register") Register/Login 
+    

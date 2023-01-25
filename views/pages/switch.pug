@@ -1,0 +1,13 @@
+html
+    head
+        title Switch
+    body 
+        include ../partials/headers
+
+        h1 Switch Accounts 
+        h4 If you want to become an artist, you have to have an artwork!
+        div 
+            button#switch(type="button") Switch to #{otherType} 
+        div 
+            button#stay(type="button") Stay on current 
+        script(src="/switch.js")

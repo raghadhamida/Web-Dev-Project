@@ -1,0 +1,21 @@
+html
+    head
+        title Add
+    body 
+        include ../partials/headers
+        h1 Enter Artwork Information:
+        p Name: 
+           input(type="textbox" id="name") 
+        p Year: 
+           input(type="textbox" id="year") 
+        p Category: 
+           input(type="textbox" id="category")
+        p Medium: 
+           input(type="textbox" id="medium")
+        p Description: 
+           input(type="textbox" id="description")
+        p Image URL: 
+           input(type="textbox" id="image")
+        div 
+            button#add(type="button") Add Artwork
+        script(src="/addArtwork.js")

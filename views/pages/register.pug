@@ -1,0 +1,22 @@
+html 
+    head 
+        title Register 
+    body 
+        include ../partials/headers.pug 
+        span 
+            form(action="/login" method="post")
+                | Username: 
+                input(type="text" name="username" required)
+                | Password:
+                input(type="password" name="password" required)
+                |
+                button(type="submit") Login
+        div 
+            | Username: 
+            input#username(type="textbox") 
+        div 
+            | Password: 
+            input#password(type="password") 
+        div 
+            button#reg(type="button") Register 
+        script(src="/register.js")

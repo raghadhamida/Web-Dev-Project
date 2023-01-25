@@ -1,0 +1,23 @@
+html
+    head
+        title Search
+    body 
+        include ../partials/headers
+ 
+        h4 Search by:
+        div 
+            select#search-select
+                option(value="name") Artwork Name
+                option(value="artist") Artist Name
+                option(value="category") Category
+        div
+            p Enter search criteria:
+            input(type="textbox" id="search") 
+        div 
+            button#submit(type="button") Search
+        div 
+            ul
+            h4 Available Artworks Names with their Category and Artist Name:
+            each art in arts 
+                li #{art.name} , #[b Category]: #{art.category} , #[b By Artist]: #{art.artist}
+        script(src="/search.js")
